@@ -1,6 +1,6 @@
 {
     "name": "easyrdf/easyrdf",
-    "version": "0.10.0-tqjava.1",
+    "version": "0.10.0-alpha.1",
     "description": "EasyRdf fork that prevents java in TQ from double encoding %7B and %7D",
     "type": "library",
     "keywords": ["RDF", "Semantic Web", "Linked Data", "Turtle", "RDFa", "SPARQL"],
