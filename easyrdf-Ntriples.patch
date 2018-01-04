@@ -1,0 +1,15 @@
+--- easyrdf-master/lib/Parser/Ntriples.php	2017-10-29 23:50:35.000000000 +0000
++++ easyrdf/lib/Parser/Ntriples.php	2018-01-03 20:45:43.570720149 +0000
+@@ -57,6 +57,12 @@
+      **/
+     protected function unescapeString($str)
+     {
++	    // catch {} escapes that are double coded later in Java
++	    if (strpos($str, '%7')) === true {
++			$str = preg_replace('/%7B/','{',$str);
++			$str = preg_replace('/%7D/','}',$str);
++		}
++		  
+         if (strpos($str, '\\') === false) {
+             return $str;
+         }
