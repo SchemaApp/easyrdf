@@ -1,5 +1,9 @@
 EasyRdf
 =======
+This fork was required to circumvent java double-unencoding URLs containing
+curly braces such as with GET params like index={CODE}, in addition the 
+Top Quadrant 5.2.2 required the 0.9.x series libraries
+
 EasyRdf is a PHP library designed to make it easy to consume and produce [RDF].
 It was designed for use in mixed teams of experienced and inexperienced RDF
 developers. It is written in Object Oriented PHP and has been tested
