@@ -54,7 +54,7 @@ class EasyRdf_Parser_Ntriples extends EasyRdf_Parser
     protected function unescapeString($str)
     {
 	    // catch {} escapes that are double coded later in Java
-	    if (strpos($str, '%7') === true) {
+	    if (strpos($str, '%7') > 0) {
 			$str = preg_replace('/%7B/','{',$str);
 			$str = preg_replace('/%7D/','}',$str);
 		}
