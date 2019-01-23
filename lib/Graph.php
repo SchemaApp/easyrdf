@@ -294,7 +294,7 @@ class Graph
         $client->resetParameters(true);
         $client->setConfig(array('maxredirects' => 0));
         $client->setMethod('GET');
-        $client->setHeaders('Accept', Format::getHttpAcceptHeader());
+        $client->setHeaders('Accept', 'text/turtle');
 
         $requestUrl = $uri;
         $response = null;

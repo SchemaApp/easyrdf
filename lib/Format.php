@@ -614,7 +614,7 @@ Format::register(
     'RDF/XML',
     'http://www.w3.org/TR/rdf-syntax-grammar',
     array(
-        'application/rdf+xml' => 0.8
+        'application/rdf+xml' => 1.1 
     ),
     array('rdf', 'xrdf')
 );

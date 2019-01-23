@@ -24,16 +24,16 @@
 
 <?php
   // Use a local SPARQL 1.1 Graph Store (eg RedStore)
-  $gs = new \EasyRdf\GraphStore('http://localhost:8080/data/');
+  $gs = new \EasyRdf\GraphStore('http://127.0.0.1:9999/blazegraph/sparql');
 
   // Add the current time in a graph
   $graph1 = new \EasyRdf\Graph();
-  $graph1->add('http://example.com/test', 'rdfs:label', 'Test');
-  $graph1->add('http://example.com/test', 'dc:date', time());
-  $gs->insert($graph1, 'time.rdf');
+  $graph1->add('http://example.com/test3', 'rdfs:label', 'Test3');
+  $graph1->add('http://example.com/test3', 'dc:date', time());
+  $gs->insert($graph1, 'http://examplegraph.com', 'turtle');
 
   // Get the graph back out of the graph store and display it
-  $graph2 = $gs->get('time.rdf');
+  $graph2 = $gs->get('http://examplegraph.com');
   print $graph2->dump();
 ?>
 
