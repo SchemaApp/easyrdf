@@ -28,14 +28,13 @@
     "require": {
         "php": ">=5.3.0",
         "ext-mbstring": "*",
-        "ext-pcre": "*"
+        "ext-pcre": "*",
+        "ml/json-ld": "~1.0"
     },
     "suggest": {
-        "ml/json-ld": "~1.0",
         "semsol/arc2": "~2.2"
     },
     "require-dev": {
-        "ml/json-ld": "~1.0",
         "phpunit/PHPUnit": "~4.1",
         "sami/sami": "~2.0",
         "semsol/arc2": "~2.2",
