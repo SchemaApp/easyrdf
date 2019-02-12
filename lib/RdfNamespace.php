@@ -92,6 +92,7 @@ class RdfNamespace
         'skos'    => 'http://www.w3.org/2004/02/skos/core#',
         'skosxl'  => 'http://www.w3.org/2008/05/skos-xl#',
         'synd'    => 'http://purl.org/rss/1.0/modules/syndication/',
+        'stripe'  => 'http://hunchmanifest.com/ontology/stripe#',
         'v'       => 'http://rdf.data-vocabulary.org/#',
         'vcard'   => 'http://www.w3.org/2006/vcard/ns#',
         'void'    => 'http://rdfs.org/ns/void#',
