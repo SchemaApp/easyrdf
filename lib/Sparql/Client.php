@@ -389,7 +389,7 @@ class Client
             return $result;
         } elseif (strpos($content_type, 'application/json') === 0) {
             //Neptune returns a JSON value which cannot be parsed, return it
-            return $response->getBody()
+            return $response->getBody();
         } else {
             $result = new Graph($this->queryUri, $response->getBody(), $content_type);
             return $result;
