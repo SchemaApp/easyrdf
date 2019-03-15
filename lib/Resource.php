@@ -43,7 +43,7 @@ namespace EasyRdf;
  * @copyright  Copyright (c) 2009-2013 Nicholas J Humfrey
  * @license    http://www.opensource.org/licenses/bsd-license.php
  */
-class Resource implements \ArrayAccess
+class Resource implements \ArrayAccess, \JsonSerializable
 {
     /** The URI for this resource */
     protected $uri = null;
@@ -825,4 +825,17 @@ class Resource implements \ArrayAccess
     {
         $this->__unset($offset);
     }
+
+    /**
+     * Serialize the content to JSON
+     *
+     * @return array
+     */
+    public function jsonSerialize() {
+        return [
+            '@type' => 'URI',
+            '@value' => $this->uri
+        ];
+    }
+
 }
