@@ -299,4 +299,48 @@ class Utils
 
         return $output;
     }
+    
+    public static function replaceBNodes(Graph $easyRdfGraph, string $baseUri) {
+        $allResources = $easyRdfGraph->resources();
+        $index = 0;
+
+        foreach($allResources as $resource) {
+            if ($resource->isBNode()) {
+                $properties = $resource->properties();
+                $index += 1;
+                
+                // Build URI using the base Uri concatted with the type and an index
+                $type = $resource->type();
+                $splitParts = preg_split('/(#|:)/', $type);
+                $name = end($splitParts);
+                $uri = $baseUri . "#" . $name . $index;
+                $definedResource = new \EasyRdf\Resource($uri);
+                
+                // get properties
+                foreach($properties as $prop) {
+                    $things = $resource->all($prop);
+                    // add all the things under the definedResource
+                    // delete everything along with the old resource
+                    foreach($things as $thing) {
+                        $easyRdfGraph->add($definedResource, $prop, $thing);
+                        $easyRdfGraph->delete($resource, $prop, $thing);
+                    }
+                }
+
+                // Now we update the properties that pointed at the old resource
+                // They need to point at the new resource
+                $reversed = $easyRdfGraph->reversePropertyUris($resource);
+                
+                foreach($reversed as $incoming) {
+                    $resourcesMatching = $easyRdfGraph->resourcesMatching($incoming, $resource);
+                    
+                    foreach($resourcesMatching as $incomingResource) {
+                        $easyRdfGraph->add($incomingResource, $incoming, $definedResource);
+                        $easyRdfGraph->delete($incomingResource, $incoming, $resource);
+                    }
+                }
+            }
+        }
+    }   
+    
 }
