@@ -63,7 +63,7 @@ class RdfNamespace
         'dcat'    => 'http://www.w3.org/ns/dcat#',
         'dcterms' => 'http://purl.org/dc/terms/',
         'doap'    => 'http://usefulinc.com/ns/doap#',
-        'drip'    => 'http://schemapp.com/ontology/drip/',
+        'drip'    => 'http://schemaapp.com/ontology/drip/',
         'exif'    => 'http://www.w3.org/2003/12/exif/ns#',
         'foaf'    => 'http://xmlns.com/foaf/0.1/',
         'ga'      => 'http://schemaapp.com/ontology/googleanalytics#',
