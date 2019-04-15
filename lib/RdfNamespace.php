@@ -104,6 +104,7 @@ class RdfNamespace
         'v'       => 'http://rdf.data-vocabulary.org/#',
         'vcard'   => 'http://www.w3.org/2006/vcard/ns#',
         'void'    => 'http://rdfs.org/ns/void#',
+        'webmanager' => 'http://hunchmanifest.com/ontology/webmanager#',
         'wdr'     => 'http://www.w3.org/2007/05/powder#',
         'wdrs'    => 'http://www.w3.org/2007/05/powder-s#',
         'wot'     => 'http://xmlns.com/wot/0.1/',
