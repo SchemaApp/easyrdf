@@ -75,7 +75,7 @@ class RdfNamespace
         'high'    => 'http://schemaapp.com/ontology/highlight#',
         'ical'    => 'http://www.w3.org/2002/12/cal/icaltzd#',
         'jsonld'  => 'http://hunchmanifest.com/ontology/json-ld#',
-        'legs'    => 'http://schemaapp.com/ontology/eightylegs#Crawl',
+        'legs'    => 'http://schemaapp.com/ontology/eightylegs#',
         'ma'      => 'http://www.w3.org/ns/ma-ont#',
         'og'      => 'http://ogp.me/ns#',
         'org'     => 'http://www.w3.org/ns/org#',
