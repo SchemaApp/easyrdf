@@ -92,6 +92,7 @@ class RdfNamespace
         'rss'     => 'http://purl.org/rss/1.0/',
         'schema'  => 'http://schema.org/',
         'schemamodel' => 'http://schemaapp.com/ontology/schemamodel#',
+        'schr'    => 'http://schemaapp.com/resources/admin/',
         'sd'      => 'http://www.w3.org/ns/sparql-service-description#',
         'sh'      => 'http://www.w3.org/ns/shacl#',
         'shopify' => 'http://schemaapp.com/ontology/shopify#',
