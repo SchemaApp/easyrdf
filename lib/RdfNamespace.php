@@ -102,6 +102,7 @@ class RdfNamespace
         'sp'      => 'http://spinrdf.org/sp#',
         'synd'    => 'http://purl.org/rss/1.0/modules/syndication/',
         'stripe'  => 'http://hunchmanifest.com/ontology/stripe#',
+        'youtube' => 'http://schemaapp.com/ontology/youtube#',
         'v'       => 'http://rdf.data-vocabulary.org/#',
         'vcard'   => 'http://www.w3.org/2006/vcard/ns#',
         'void'    => 'http://rdfs.org/ns/void#',
