@@ -105,6 +105,7 @@ class RdfNamespace
 
         // Custom Namespaces
         'aws'     => 'http://schemaapp.com/ontology/aws#',
+        'bigcom'  => 'http://schemaapp.com/resources/bigcommerce/',
         'drip'    => 'http://schemaapp.com/ontology/drip/',
         'high'    => 'http://schemaapp.com/ontology/highlight#',
         'hmapp'   => 'http://hunchmanifest.com/ontology/Application#',
