@@ -110,7 +110,7 @@ class RdfNamespace
         'high'    => 'http://schemaapp.com/ontology/highlight#',
         'hmapp'   => 'http://hunchmanifest.com/ontology/Application#',
         'jsonld'  => 'http://hunchmanifest.com/ontology/json-ld#',
-        'legs'    => 'http://schemaapp.com/ontology/eightylegs#Crawl',
+        'legs'    => 'http://schemaapp.com/ontology/eightylegs#',
         'pipedrive' => 'http://schemaapp.com/ontology/pipedrive/',
         'schemamodel' => 'http://schemaapp.com/ontology/schemamodel#',
         'schr'    => 'http://schemaapp.com/resources/admin/',
