@@ -588,11 +588,11 @@ Format::register(
     'N-Triples',
     'http://www.w3.org/TR/n-triples/',
     array(
-        'application/n-triples' => 1.0,
-        'text/plain' => 0.9,
-        'text/ntriples' => 0.9,
-        'application/ntriples' => 0.9,
-        'application/x-ntriples' => 0.9
+        'application/n-triples' => 0.8,
+        'text/plain' => 0.8,
+        'text/ntriples' => 0.8,
+        'application/ntriples' => 0.8,
+        'application/x-ntriples' => 0.8
     ),
     array('nt')
 );
@@ -602,9 +602,9 @@ Format::register(
     'Turtle Terse RDF Triple Language',
     'http://www.dajobe.org/2004/01/turtle',
     array(
-        'text/turtle' => 0.8,
-        'application/turtle' => 0.7,
-        'application/x-turtle' => 0.7
+        'text/turtle' => 0.9,
+        'application/turtle' => 0.9,
+        'application/x-turtle' => 1.0
     ),
     array('ttl')
 );
@@ -614,7 +614,7 @@ Format::register(
     'RDF/XML',
     'http://www.w3.org/TR/rdf-syntax-grammar',
     array(
-        'application/rdf+xml' => 1.1 
+        'application/rdf+xml' => 0.7 
     ),
     array('rdf', 'xrdf')
 );
@@ -624,7 +624,7 @@ Format::register(
     'Graphviz',
     'http://www.graphviz.org/doc/info/lang.html',
     array(
-        'text/vnd.graphviz' => 0.8
+        'text/vnd.graphviz' => 0.5
     ),
     array('gv', 'dot')
 );
