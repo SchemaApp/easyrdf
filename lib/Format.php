@@ -556,7 +556,7 @@ Format::register(
     'RDF/PHP',
     'http://n2.talis.com/wiki/RDF_PHP_Specification',
     array(
-        'application/x-httpd-php-source' => 1.0
+        'application/x-httpd-php-source' => 0.7
     ),
     array('phps')
 );
@@ -566,9 +566,9 @@ Format::register(
     'RDF/JSON Resource-Centric',
     'http://n2.talis.com/wiki/RDF_JSON_Specification',
     array(
-        'application/json' => 1.0,
-        'text/json' => 0.9,
-        'application/rdf+json' => 0.9
+        'application/json' => 0.7,
+        'text/json' => 0.7,
+        'application/rdf+json' => 0.8
     ),
     array('json')
 );
@@ -578,7 +578,7 @@ Format::register(
     'JSON-LD',
     'http://www.w3.org/TR/json-ld/',
     array(
-        'application/ld+json' => 1.0
+        'application/ld+json' => 0.8 
     ),
     array('jsonld')
 );
@@ -670,7 +670,7 @@ Format::register(
     'SPARQL JSON Query Results',
     'http://www.w3.org/TR/rdf-sparql-json-res/',
     array(
-        'application/sparql-results+json' => 1.0
+        'application/sparql-results+json' => 0.9
     )
 );
 
