@@ -588,11 +588,11 @@ Format::register(
     'N-Triples',
     'http://www.w3.org/TR/n-triples/',
     array(
-        'application/n-triples' => 0.8,
+        'application/n-triples' => 1,
         'text/plain' => 0.8,
-        'text/ntriples' => 0.8,
-        'application/ntriples' => 0.8,
-        'application/x-ntriples' => 0.8
+        'text/ntriples' => 0.9,
+        'application/ntriples' => 0.9,
+        'application/x-ntriples' => 0.9
     ),
     array('nt')
 );
@@ -602,9 +602,9 @@ Format::register(
     'Turtle Terse RDF Triple Language',
     'http://www.dajobe.org/2004/01/turtle',
     array(
-        'text/turtle' => 0.9,
-        'application/turtle' => 0.9,
-        'application/x-turtle' => 1.0
+        'text/turtle' => 0.8,
+        'application/turtle' => 0.8,
+        'application/x-turtle' => 0.8 
     ),
     array('ttl')
 );

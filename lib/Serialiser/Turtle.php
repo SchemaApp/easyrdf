@@ -146,11 +146,11 @@ class Turtle extends Serialiser
 
         if ($datatype = $literal->getDatatypeUri()) {
             if ($datatype == 'http://www.w3.org/2001/XMLSchema#integer') {
-                return sprintf('%d', $value);
+                return sprintf('%s', $value);
             } elseif ($datatype == 'http://www.w3.org/2001/XMLSchema#decimal') {
                 return sprintf('%s', $value);
             } elseif ($datatype == 'http://www.w3.org/2001/XMLSchema#double') {
-                return sprintf('%e', $value);
+                return sprintf('%s', $value);
             } elseif ($datatype == 'http://www.w3.org/2001/XMLSchema#boolean') {
                 return sprintf('%s', $value);
             } else {
