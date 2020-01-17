@@ -57,6 +57,8 @@ class Turtle extends Serialiser
 {
     private $outputtedBnodes = array();
 
+    private $includeNumberDatatypes;
+
     /**
      * Given a IRI string, escape and enclose in angle brackets.
      *
@@ -145,18 +147,8 @@ class Turtle extends Serialiser
         $quoted = self::quotedString($value);
 
         if ($datatype = $literal->getDatatypeUri()) {
-            if ($datatype == 'http://www.w3.org/2001/XMLSchema#integer') {
-                return sprintf('%s', $value);
-            } elseif ($datatype == 'http://www.w3.org/2001/XMLSchema#decimal') {
-                return sprintf('%s', $value);
-            } elseif ($datatype == 'http://www.w3.org/2001/XMLSchema#double') {
-                return sprintf('%s', $value);
-            } elseif ($datatype == 'http://www.w3.org/2001/XMLSchema#boolean') {
-                return sprintf('%s', $value);
-            } else {
-                $escaped = $this->serialiseResource($datatype, true);
-                return sprintf('%s^^%s', $quoted, $escaped);
-            }
+            $escaped = $this->serialiseResource($datatype, true);
+            return sprintf('%s^^%s', $quoted, $escaped);
         } elseif ($lang = $literal->getLang()) {
             return $quoted . '@' . $lang;
         } else {
