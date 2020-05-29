@@ -174,14 +174,6 @@ class Graph
             }
         }
 
-        // Parsers don't typically add a rdf:type to rdf:List, so we have to
-        // do a bit of 'inference' here using properties.
-        if ($uri == 'http://www.w3.org/1999/02/22-rdf-syntax-ns#nil' or
-            isset($this->index[$uri]['http://www.w3.org/1999/02/22-rdf-syntax-ns#first']) or
-            isset($this->index[$uri]['http://www.w3.org/1999/02/22-rdf-syntax-ns#rest'])
-        ) {
-            return 'EasyRdf\Collection';
-        }
         return TypeMapper::getDefaultResourceClass();
     }
 
