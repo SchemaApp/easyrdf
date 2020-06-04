@@ -6,6 +6,12 @@
     "keywords": ["RDF", "Semantic Web", "Linked Data", "Turtle", "RDFa", "SPARQL"],
     "homepage": "http://www.easyrdf.org/",
     "license": "BSD-3-Clause",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/SchemaApp/JsonLD.git"
+        }
+    ],
     "authors": [
         {
             "name": "Nicholas Humfrey",
@@ -29,7 +35,7 @@
         "php": ">=5.3.0",
         "ext-mbstring": "*",
         "ext-pcre": "*",
-        "ml/json-ld": "~1.0"
+        "schemaapp/json-ld": "dev-master"
     },
     "suggest": {
         "semsol/arc2": "~2.2"
