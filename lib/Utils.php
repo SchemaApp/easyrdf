@@ -317,6 +317,13 @@ class Utils
         // @ symbols cause havoc use use associative 
         $jsonObj = \json_decode($jsonLd, true);
 
+        // get context and ensure it is http if it's schema.org, we don't currently support https
+        if (array_key_exists("@context", $jsonObj) && !is_array($jsonObj['@context'])) {
+            $jsonObj['@context'] = str_replace("https://schema.org/", "http://schema.org/", $jsonObj['@context']);
+        } else if (isset($jsonObj['context']['schema'])) {
+            $jsonObj['@context']['schema'] = str_replace("https://schema.org/", "http://schema.org/", $jsonObj['@context']['schema']);
+        }
+
         // If it's one value (most cases) just set the context to the @vocab
         // Solves for https://github.com/lanthaler/JsonLD/issues/3 where it load remote contexts
         if (!array_key_exists("@context", $jsonObj) || gettype($jsonObj['@context'] === "string")) {
