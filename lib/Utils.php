@@ -312,7 +312,7 @@ class Utils
             if (is_array($value)) {
                 $object[$key] = self::fixContexts($value);
             }            
-            if ($key == "@context") {
+            if ($key == "@context" && !is_array($value)) {
                 $object[$key] = str_replace("https://schema.org", "http://schema.org", $object[$key]);
                 // I found cases in WP where trailing slashes were missing so handle that as well.
                 $object[$key] = $object[$key] === "http://schema.org" ? "http://schema.org/" : $object[$key];
